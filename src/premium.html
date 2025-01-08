@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Bot Premium Features</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="IMG_7982.png" alt="Prime Bot Logo" class="logo">
+            <h1>Prime</h1>
+        </div>
+    </header>
+    
+    <main class="content">
+        <section class="premium-plans">
+            <h2>Premium Plans</h2>
+            
+            <!-- Monthly/Annual Text -->
+            <div class="plan-toggle">
+                <span id="toggle-label">Monthly</span>
+                <button id="toggle-button" class="toggle-btn"></button>
+            </div>
+            
+            <!-- Plan Details -->
+            <div class="plan-details">
+                <div class="plan" id="user-premium">
+                    <h3>User Premium</h3>
+                    <p id="user-price">$1/month</p>
+                    <p id="user-annual-price" class="annual-price" style="display:none;">$7/year</p>
+                    <ul>
+                        <li>1. Priority Support</li>
+                        
+                        <li>2. Access to Premium Only User Commands</li>
+                        
+                        <li>3. Access to hidden channels</li>
+                        
+                        <li>4. Get new feature leaks</li>
+                        
+                        <li>5. Get benefits in economy system</li>
+                    </ul>
+                </div>
+                
+                <div class="plan" id="guild-premium">
+                    <h3>Guild Premium</h3>
+                    <p id="guild-price">$2.99/month</p>
+                    <p id="guild-annual-price" class="annual-price" style="display:none;">$14.99/year</p>
+                    <ul>
+                        <li>1. Get 1 free user premium</li>
+                        
+                        <li>2. Priority Support</li>
+                        
+                        <li>3. Greet Autodel unlock</li>
+                        
+                        <li>4. Unlimited autoresponders</li>
+                        
+                        <li>5. Unlimited autoreactors</li>
+                        
+                        <li>6. Unlimited Media Channels</li>
+                        
+                        <li>7. Unlimited Greet Channels</li>
+                        
+                        <li>8. Unlimited Vanity Roles</li>
+                        
+                        <li>9. Unlimited Tagcheck Channels</li>
+                        
+                        <li>10. Unlimited Easytag Channels</li>
+                        
+                        <li>11. Unlimited SS Verification</li>
+
+                        <li>12. Unlimited Boost Messages</li>
+
+                        <li>13. Unlimited Join DMs</li>
+
+                        <li>14. Unlimited Leave Messages</li>
+
+                        <li>15. Upto 10 Backups</li>
+                        
+                        <li>16. Unlimited Whitelists</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Purchase Button -->
+            <div class="purchase-btn-container">
+                <a href="https://discord.gg/VMkv79vBfX" class="purchase-btn">Purchase Now</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Prime Bot. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const toggleLabel = document.getElementById('toggle-label');
+        const userPrice = document.getElementById('user-price');
+        const userAnnualPrice = document.getElementById('user-annual-price');
+        const guildPrice = document.getElementById('guild-price');
+        const guildAnnualPrice = document.getElementById('guild-annual-price');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', function() {
+            const isMonthly = userPrice.style.display !== 'none';
+
+            if (isMonthly) {
+                // Switch to Annual
+                userPrice.style.display = 'none';
+                userAnnualPrice.style.display = 'block';
+                guildPrice.style.display = 'none';
+                guildAnnualPrice.style.display = 'block';
+                body.style.background = '#2a3d54';  // Darker background for Annual
+                toggleLabel.textContent = "Annual";
+                toggleButton.classList.add('toggled');
+            } else {
+                // Switch to Monthly
+                userPrice.style.display = 'block';
+                userAnnualPrice.style.display = 'none';
+                guildPrice.style.display = 'block';
+                guildAnnualPrice.style.display = 'none';
+                body.style.background = '#f4f4f4';  // Lighter background for Monthly
+                toggleLabel.textContent = "Monthly";
+                toggleButton.classList.remove('toggled');
+            }
+        });
+    </script>
+</body>
+</html>
