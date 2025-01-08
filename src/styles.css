@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+/* Content Section */
+.content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.premium-plans {
+    text-align: center;
+}
+
+.premium-plans h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Sliding Button for Monthly/Annual Toggle */
+.plan-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#toggle-label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.toggle-btn {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-btn.toggled {
+    background-color: #4b79a1;
+}
+
+.toggle-btn.toggled:before {
+    transform: translateX(30px);
+}
+
+/* Plan Details */
+.plan-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.plan {
+    width: 45%;
+    padding: 1.5rem;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plan h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.plan ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+}
+
+.plan ul li {
+    margin: 5px 0;
+}
+
+.annual-price {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Purchase Button */
+.purchase-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.purchase-btn {
+    padding: 10px 20px;
+    background: #4b79a1;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-btn:hover {
+    background: #283e51;
+}
+
+.purchase-btn:active {
+    background: #1d2b37;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #283e51;
+    color: white;
+    margin-top: 2rem;
+}
